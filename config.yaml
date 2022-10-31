@@ -1,6 +1,6 @@
 project:
     project_name: Questionnnair data analyses
-    description: Questionnaire data analyses code from ART piplot analyses
+    description: Questionnaire data analyses code from ART pilot analyses
     version: 0.0
 
 input_data:
