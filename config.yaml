@@ -12,9 +12,9 @@ configurations:
     df_type: 'pandas'
 
 features:
-    - location: /Users/heetsankesara/work/RADAR/radar-pipeline/questionnnairdataanalyses
+    - location: /Users/heetsankesara/work/RADAR/radar-pipeline/questionnairedataanalyses
       feature_groups:
-          - QuestionnnairDataAnalyses
+          - QuestionnaireDataAnalyses
 
 output_data:
     output_location: local
