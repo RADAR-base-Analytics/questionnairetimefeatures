@@ -1,23 +1,23 @@
 project:
-    project_name: Questionnnair data analyses
+    project_name: Questionnaire data analyses
     description: Questionnaire data analyses code from ART piplot analyses
-    version: 0.0
+    version: 0.0 d
 
 input_data:
-    data_location: local
-    local_directory: /Users/heetsankesara/work/ART/data_cleaning/questionnaire_data/
+    data_location: mock
+    local_directory: mockdata/mockdata
     data_format: csv
 
 configurations:
     df_type: 'pandas'
 
 features:
-    - location: /Users/heetsankesara/work/RADAR/radar-pipeline/questionnairedataanalyses
+    - location: https://github.com/RADAR-base-Analytics/questionnairedataanalyses
       feature_groups:
           - QuestionnaireDataAnalyses
 
 output_data:
     output_location: local
-    local_directory: passive_output
+    local_directory: output
     data_format: csv
     compress: false

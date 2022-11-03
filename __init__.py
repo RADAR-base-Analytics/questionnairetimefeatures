@@ -1,3 +1,3 @@
-from .questionnairdataanalyses.features import (
-    QuestionnnairDataAnalyses
+from .questionnairedataanalyses.features import (
+    QuestionnaireDataAnalyses
 )
