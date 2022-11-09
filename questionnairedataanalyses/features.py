@@ -3,10 +3,10 @@ from radarpipeline.datalib import RadarData
 from radarpipeline.features import Feature, FeatureGroup
 
 
-class QuestionnnairDataAnalyses(FeatureGroup):
+class QuestionnaireDataAnalyses(FeatureGroup):
     def __init__(self):
-        name = "QuestionnnairDataAnalyses"
-        description = "contains Questionnnaire Data Features"
+        name = "QuestionnaireDataAnalyses"
+        description = "contains Questionnaire Data Features"
         features = [QuestionnaireNotificationResponseLatency, QuestionnaireCompletionTime]
         super().__init__(name, description, features)
 
@@ -22,6 +22,7 @@ class QuestionnnairDataAnalyses(FeatureGroup):
         df_ques_app_event['value.time'] = pd.to_datetime(df_ques_app_event['value.time'], unit="s")
         df_ques_app_event['value.timeNotification'] = pd.to_datetime(df_ques_app_event['value.timeNotification'], unit="s")
         df_ques_app_event['value.timeCompleted'] = pd.to_datetime(df_ques_app_event['value.timeCompleted'], unit="s")
+        print(df_ques_app_event)
         df_ques_app_event = df_ques_app_event.rename({"key.userId" : "uid", "value.time" : "time", "value.timeNotification": "time_notification",
                                                             "value.timeCompleted": "time_completed", "value.name":"name"}, axis=1)
         df_ques_app_event = df_ques_app_event.drop_duplicates(subset=["uid", "time", "name"]).reset_index(drop=True)
@@ -39,7 +40,10 @@ class QuestionnaireNotificationResponseLatency(Feature):
     def __init__(self):
         self.name = "QuestionnaireNotificationResponseLatency"
         self.description = "The time it took for participants to start filling out the questionnaires after receiving the notification."
-        self.required_input_data = ["questionnaire_ari_self", "questionnaire_gad7", "questionnaire_phq8", "questionnaire_rpq", "questionnaire_baars_iv"]
+        ## For ART-Pilot analyses
+        # self.required_input_data = ["questionnaire_ari_self", "questionnaire_gad7", "questionnaire_phq8", "questionnaire_rpq", "questionnaire_baars_iv"]
+        ## For mock data
+        self.required_input_data = ["questionnaire_esm","questionnaire_phq8","questionnaire_rses"]
 
     def preprocess(self, data):
         """
@@ -62,7 +66,10 @@ class QuestionnaireCompletionTime(Feature):
     def __init__(self):
         self.name = "QuestionnaireCompletionTime"
         self.description = "The time it took for participants to finish the questionnaires after starting them. "
-        self.required_input_data = ["questionnaire_ari_self", "questionnaire_gad7", "questionnaire_phq8", "questionnaire_rpq", "questionnaire_baars_iv"]
+        ## For ART-Pilot analyses
+        # self.required_input_data = ["questionnaire_ari_self", "questionnaire_gad7", "questionnaire_phq8", "questionnaire_rpq", "questionnaire_baars_iv"]
+        ## For mock data
+        self.required_input_data = ["questionnaire_esm","questionnaire_phq8","questionnaire_rses"]
 
     def preprocess(self, data):
         """
