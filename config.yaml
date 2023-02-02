@@ -1,5 +1,5 @@
 project:
-    project_name: Questionnaire data analyses
+    project_name: Questionnaire Time Features
     description: Questionnaire data analyses code from ART pilot analyses
     version: 0.0
 
@@ -12,9 +12,11 @@ configurations:
     df_type: 'pandas'
 
 features:
-    - location: https://github.com/RADAR-base-Analytics/questionnairedataanalyses
+    - location: https://github.com/RADAR-base-Analytics/questionnairetimefeatures
       feature_groups:
-          - QuestionnaireDataAnalyses
+          - QuestionnaireTimeFeatures
+      feature_names:
+        - all
 
 output_data:
     output_location: local

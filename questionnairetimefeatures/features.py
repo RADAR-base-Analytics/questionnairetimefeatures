@@ -3,10 +3,10 @@ from radarpipeline.datalib import RadarData
 from radarpipeline.features import Feature, FeatureGroup
 
 
-class QuestionnaireDataAnalyses(FeatureGroup):
+class QuestionnaireTimeFeatures(FeatureGroup):
     def __init__(self):
-        name = "QuestionnaireDataAnalyses"
-        description = "contains Questionnaire Data Features"
+        name = "QuestionnaireTimeFeatures"
+        description = "contains Questionnaire time Features"
         features = [QuestionnaireNotificationResponseLatency, QuestionnaireCompletionTime]
         super().__init__(name, description, features)
 
