@@ -28,8 +28,9 @@ configurations:
 
 features:
     - location: https://github.com/RADAR-base-Analytics/questionnairetimefeatures
+      branch: main
       feature_groups:
-          - QuestionnaireTimeFeatures
+        - QuestionnaireTimeFeatures
       feature_names:
         - all
 
