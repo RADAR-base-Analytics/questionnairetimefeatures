@@ -1,3 +1,3 @@
 from .questionnairetimefeatures.features import (
-    QuestionnaireTimeFeatures
+    QuestionnaireTimeFeatures, QuestionnaireNotificationResponseLatency, QuestionnaireCompletionTime
 )

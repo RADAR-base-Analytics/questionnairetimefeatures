@@ -7,7 +7,8 @@ class QuestionnaireTimeFeatures(FeatureGroup):
     def __init__(self):
         name = "QuestionnaireTimeFeatures"
         description = "contains Questionnaire time Features"
-        features = [QuestionnaireNotificationResponseLatency, QuestionnaireCompletionTime]
+        features = [QuestionnaireNotificationResponseLatency,
+                    QuestionnaireCompletionTime]
         super().__init__(name, description, features)
 
     def preprocess(self, data: RadarData) -> RadarData:
