@@ -20,14 +20,14 @@ input:
         #       bucket:
         #       prefix:
         # In case of local or Mock, use the following format
-        source_path: /Users/heetsankesara/work/ART/data_pulling/questionnaire_data/
+        source_path: mockdata/mockdata
     data_format: csv
 
 configurations:
     df_type: 'pandas'
 
 features:
-    - location: '/Users/heetsankesara/work/RADAR/radar-pipeline/questionnairetest/'
+    - location: 'https://github.com/RADAR-base-Analytics/questionnairetimefeatures'
       feature_groups:
           - QuestionnaireTest
       feature_names:
